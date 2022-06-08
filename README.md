@@ -1,3 +1,7 @@
+Kubernetes で Wordpress + MySQL を構築するサンプルコード。
+
+# 動作確認
+
 クラスターを構築
 
 ```
@@ -14,4 +18,10 @@ $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/ma
 
 ```
 $ kubectl apply -k ./manifests/overlays/local/
+```
+
+# 後片付け
+
+```
+$ kind delete cluster
 ```
