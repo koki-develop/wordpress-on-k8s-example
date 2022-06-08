@@ -1,0 +1,14 @@
+bases:
+- ../../base/
+
+resources:
+- mysql.yaml
+
+patches:
+- wordpress.yaml
+
+secretGenerator:
+- name: mysql-password
+  literals:
+  - wordpress=p@ssw0rd
+  - root=p@ssw0rd
