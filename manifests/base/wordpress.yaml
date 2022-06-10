@@ -5,6 +5,7 @@ metadata:
   labels:
     app: wordpress
 spec:
+  type: NodePort
   ports:
   - name: http
     port: 80
@@ -53,6 +54,8 @@ metadata:
   labels:
     app: wordpress
 spec:
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: wordpress
